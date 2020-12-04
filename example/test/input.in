@@ -1,0 +1,9 @@
+
+# Data files
+data isotopes="/cloud/Code/python/activity/data/isotopes" xs="/cloud/Code/python/activity/data/xs"
+
+# Sim
+sim1 exyz="Fe36MeV.exyz" target_composition=Fe,100 target_depth=0.5,mm target_density=8100,kgm3 beam_projectile='proton' beam_energy=36,MeV beam_area=64,mm2 beam_duration=300,s beam_current=0.5,uA end_time=260000,s
+#sim1 exyz="Fe36MeV.exyz" target_composition=H,0.01,Fe,0.69,Cr,0.2,Co55,0.1 target_depth=0.5,mm target_density=8100,kgm3 beam_projectile='proton' beam_energy=36,MeV beam_area=64,mm2 beam_duration=300,s beam_current=0.5,uA end_time=260000,s
+#sim2 exyz="Fe36MeV.exyz" target=fe,0.8,Cr,0.2,Co55,0.1 
+
