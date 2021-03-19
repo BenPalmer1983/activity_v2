@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/xs_data/xs_Si28_P29
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 22:53:56 2020
+%%CreationDate: Sun Mar 14 15:30:32 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -42,7 +42,7 @@ newpath
 /FontMatrix[.001 0 0 .001 0 0]def
 /FontBBox[-1021 -463 1793 1232]def
 /FontType 3 def
-/Encoding [ /space /parenleft /parenright /hyphen /period /zero /one /two /three /four /five /eight /nine /greater /B /E /P /R /S /T /V /X /a /b /c /e /g /i /n /o /r /s /t /v /y ] def
+/Encoding [ /space /parenleft /parenright /hyphen /period /zero /one /two /three /four /five /six /eight /nine /greater /B /E /P /R /S /T /V /X /a /b /c /e /g /i /n /o /r /s /t /v /y ] def
 /FontInfo 10 dict dup begin
 /FamilyName (DejaVu Sans) def
 /FullName (DejaVu Sans) def
@@ -54,7 +54,7 @@ newpath
 /UnderlinePosition -130 def
 /UnderlineThickness 90 def
 end readonly def
-/CharStrings 36 dict dup begin
+/CharStrings 37 dict dup begin
 /.notdef 0 def
 /space{318 0 0 0 0 0 _sc
 }_d
@@ -230,6 +230,35 @@ _cl}_d
 241 399 214 396 188 390 _c
 162 384 135 375 108 363 _c
 108 729 _l
+_cl}_e}_d
+/six{{636 0 70 -13 573 742 _sc
+330 404 _m
+286 404 251 388 225 358 _c
+199 328 186 286 186 234 _c
+186 181 199 139 225 109 _c
+251 79 286 64 330 64 _c
+374 64 409 79 435 109 _c
+461 139 474 181 474 234 _c
+474 286 461 328 435 358 _c
+409 388 374 404 330 404 _c
+526 713 _m
+526 623 _l
+501 635 476 644 451 650 _c
+425 656 400 659 376 659 _c
+310 659 260 637 226 593 _c
+}_e{192 549 172 482 168 394 _c
+187 422 211 444 240 459 _c
+269 474 301 482 336 482 _c
+409 482 467 459 509 415 _c
+551 371 573 310 573 234 _c
+573 159 550 99 506 54 _c
+462 9 403 -13 330 -13 _c
+246 -13 181 19 137 83 _c
+92 147 70 241 70 364 _c
+70 479 97 571 152 639 _c
+206 707 280 742 372 742 _c
+396 742 421 739 447 735 _c
+472 730 498 723 526 713 _c
 _cl}_e}_d
 /eight{{636 0 68 -13 568 742 _sc
 318 346 _m
@@ -1051,8 +1080,8 @@ grestore
 0.690 setgray
 gsave
 669.6 443.5 108 63.36 clipbox
-108 83.52 m
-777.6 83.52 l
+108 83.519999 m
+777.6 83.519999 l
 stroke
 grestore
 0 setlinecap
@@ -1078,19 +1107,24 @@ grestore
 108 83.52 o
 grestore
 gsave
-78.734375 79.723125 translate
+46.937500 79.723124 translate
 0.000000 rotate
 0.000000 0.000000 m /zero glyphshow
 6.362305 0.000000 m /period glyphshow
 9.541016 0.000000 m /zero glyphshow
 15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /zero glyphshow
+47.714844 0.000000 m /zero glyphshow
 grestore
 2 setlinecap
 0.690 setgray
 gsave
 669.6 443.5 108 63.36 clipbox
-108 170.55564 m
-777.6 170.55564 l
+108 142.636307 m
+777.6 142.636307 l
 stroke
 grestore
 0 setlinecap
@@ -1113,60 +1147,27 @@ grestore
 stroke
 grestore
 } bind def
-108 170.556 o
+108 142.636 o
 grestore
 gsave
-78.734375 166.758765 translate
+46.937500 138.839432 translate
 0.000000 rotate
 0.000000 0.000000 m /zero glyphshow
 6.362305 0.000000 m /period glyphshow
 9.541016 0.000000 m /zero glyphshow
-15.903320 0.000000 m /five glyphshow
-grestore
-2 setlinecap
-0.690 setgray
-gsave
-669.6 443.5 108 63.36 clipbox
-108 257.59128 m
-777.6 257.59128 l
-stroke
-grestore
-0 setlinecap
-0.000 setgray
-gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 257.591 o
-grestore
-gsave
-78.734375 253.794405 translate
-0.000000 rotate
-0.000000 0.000000 m /zero glyphshow
-6.362305 0.000000 m /period glyphshow
-9.541016 0.000000 m /one glyphshow
 15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /zero glyphshow
+47.714844 0.000000 m /two glyphshow
 grestore
 2 setlinecap
 0.690 setgray
 gsave
 669.6 443.5 108 63.36 clipbox
-108 344.62692 m
-777.6 344.62692 l
+108 201.752615 m
+777.6 201.752615 l
 stroke
 grestore
 0 setlinecap
@@ -1189,56 +1190,238 @@ grestore
 stroke
 grestore
 } bind def
-108 344.627 o
+108 201.753 o
 grestore
 gsave
-78.734375 340.830045 translate
+46.937500 197.955740 translate
 0.000000 rotate
 0.000000 0.000000 m /zero glyphshow
 6.362305 0.000000 m /period glyphshow
-9.541016 0.000000 m /one glyphshow
-15.903320 0.000000 m /five glyphshow
-grestore
-2 setlinecap
-0.690 setgray
-gsave
-669.6 443.5 108 63.36 clipbox
-108 431.66256 m
-777.6 431.66256 l
-stroke
-grestore
-0 setlinecap
-0.000 setgray
-gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 431.663 o
-grestore
-gsave
-78.734375 427.865685 translate
-0.000000 rotate
-0.000000 0.000000 m /zero glyphshow
-6.362305 0.000000 m /period glyphshow
-9.541016 0.000000 m /two glyphshow
+9.541016 0.000000 m /zero glyphshow
 15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /zero glyphshow
+47.714844 0.000000 m /four glyphshow
+grestore
+2 setlinecap
+0.690 setgray
+gsave
+669.6 443.5 108 63.36 clipbox
+108 260.868923 m
+777.6 260.868923 l
+stroke
+grestore
+0 setlinecap
+0.000 setgray
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 260.869 o
 grestore
 gsave
-72.656250 243.026250 translate
+46.937500 257.072048 translate
+0.000000 rotate
+0.000000 0.000000 m /zero glyphshow
+6.362305 0.000000 m /period glyphshow
+9.541016 0.000000 m /zero glyphshow
+15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /zero glyphshow
+47.714844 0.000000 m /six glyphshow
+grestore
+2 setlinecap
+0.690 setgray
+gsave
+669.6 443.5 108 63.36 clipbox
+108 319.985232 m
+777.6 319.985232 l
+stroke
+grestore
+0 setlinecap
+0.000 setgray
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 319.985 o
+grestore
+gsave
+46.937500 316.188357 translate
+0.000000 rotate
+0.000000 0.000000 m /zero glyphshow
+6.362305 0.000000 m /period glyphshow
+9.541016 0.000000 m /zero glyphshow
+15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /zero glyphshow
+47.714844 0.000000 m /eight glyphshow
+grestore
+2 setlinecap
+0.690 setgray
+gsave
+669.6 443.5 108 63.36 clipbox
+108 379.10154 m
+777.6 379.10154 l
+stroke
+grestore
+0 setlinecap
+0.000 setgray
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 379.102 o
+grestore
+gsave
+46.937500 375.304665 translate
+0.000000 rotate
+0.000000 0.000000 m /zero glyphshow
+6.362305 0.000000 m /period glyphshow
+9.541016 0.000000 m /zero glyphshow
+15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /one glyphshow
+47.714844 0.000000 m /zero glyphshow
+grestore
+2 setlinecap
+0.690 setgray
+gsave
+669.6 443.5 108 63.36 clipbox
+108 438.217848 m
+777.6 438.217848 l
+stroke
+grestore
+0 setlinecap
+0.000 setgray
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 438.218 o
+grestore
+gsave
+46.937500 434.420973 translate
+0.000000 rotate
+0.000000 0.000000 m /zero glyphshow
+6.362305 0.000000 m /period glyphshow
+9.541016 0.000000 m /zero glyphshow
+15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /one glyphshow
+47.714844 0.000000 m /two glyphshow
+grestore
+2 setlinecap
+0.690 setgray
+gsave
+669.6 443.5 108 63.36 clipbox
+108 497.334156 m
+777.6 497.334156 l
+stroke
+grestore
+0 setlinecap
+0.000 setgray
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 497.334 o
+grestore
+gsave
+46.937500 493.537281 translate
+0.000000 rotate
+0.000000 0.000000 m /zero glyphshow
+6.362305 0.000000 m /period glyphshow
+9.541016 0.000000 m /zero glyphshow
+15.903320 0.000000 m /zero glyphshow
+22.265625 0.000000 m /zero glyphshow
+28.627930 0.000000 m /zero glyphshow
+34.990234 0.000000 m /zero glyphshow
+41.352539 0.000000 m /one glyphshow
+47.714844 0.000000 m /four glyphshow
+grestore
+gsave
+40.859375 243.026250 translate
 90.000000 rotate
 0.000000 0.000000 m /X glyphshow
 6.850586 0.000000 m /S glyphshow
@@ -1263,55 +1446,55 @@ grestore
 gsave
 669.6 443.5 108 63.36 clipbox
 138.436364 83.52 m
-150.610909 83.52 l
-162.785455 83.520026 l
-174.96 83.520099 l
-187.134545 83.520172 l
-199.309091 83.528489 l
-211.483636 83.642789 l
-223.658182 83.757088 l
-235.832727 83.871388 l
-248.007273 83.985687 l
-260.181818 83.522989 l
-272.356364 83.527899 l
-284.530909 83.532809 l
-296.705455 83.53772 l
-308.88 83.54263 l
-321.054545 83.547541 l
-333.229091 83.552451 l
-345.403636 83.557361 l
-357.578182 83.562272 l
-369.752727 83.567182 l
-381.927273 83.604665 l
-394.101818 84.880955 l
-406.276364 86.157245 l
-418.450909 87.433535 l
-430.625455 88.709826 l
-442.8 89.986116 l
-454.974545 91.262406 l
-467.149091 92.538696 l
-479.323636 93.814986 l
-491.498182 95.091277 l
-503.672727 96.367567 l
-515.847273 110.372017 l
-528.021818 126.667787 l
-540.196364 142.963558 l
-552.370909 159.259329 l
-564.545455 175.5551 l
-576.72 191.850871 l
-588.894545 208.146642 l
-601.069091 224.442412 l
-613.243636 240.738183 l
-625.418182 257.033954 l
-637.592727 277.948389 l
-649.767273 301.145234 l
-661.941818 324.34208 l
-674.116364 347.538926 l
-686.290909 370.735772 l
-698.465455 393.932617 l
-710.64 417.129463 l
-722.814545 440.326309 l
-734.989091 463.523154 l
+150.610909 83.578603 l
+162.785455 87.835274 l
+174.96 99.822106 l
+187.134545 111.808937 l
+199.309091 121.058585 l
+211.483636 123.69978 l
+223.658182 126.340976 l
+235.832727 128.982171 l
+248.007273 131.623366 l
+260.181818 134.806051 l
+272.356364 140.104268 l
+284.530909 145.402486 l
+296.705455 150.700703 l
+308.88 155.998921 l
+321.054545 161.297139 l
+333.229091 166.595356 l
+345.403636 171.893574 l
+357.578182 177.191792 l
+369.752727 182.490009 l
+381.927273 187.8613 l
+394.101818 196.011781 l
+406.276364 204.162262 l
+418.450909 212.312743 l
+430.625455 220.463223 l
+442.8 228.613704 l
+454.974545 236.764185 l
+467.149091 244.914666 l
+479.323636 253.065146 l
+491.498182 261.215627 l
+503.672727 269.366108 l
+515.847273 278.124489 l
+528.021818 286.992305 l
+540.196364 295.86012 l
+552.370909 304.727936 l
+564.545455 313.595751 l
+576.72 322.463567 l
+588.894545 331.331382 l
+601.069091 340.199198 l
+613.243636 349.067013 l
+625.418182 357.934829 l
+637.592727 369.578689 l
+649.767273 382.59439 l
+661.941818 395.610091 l
+674.116364 408.625792 l
+686.290909 421.641494 l
+698.465455 434.657195 l
+710.64 447.672896 l
+722.814545 460.688597 l
+734.989091 473.704299 l
 747.163636 486.72 l
 stroke
 grestore

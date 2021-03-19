@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/plots/end_of_sim/total_sim_amount_Ru98
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:10:23 2020
+%%CreationDate: Sun Mar 14 15:44:27 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -861,17 +861,14 @@ grestore
 stroke
 grestore
 } bind def
-108 173.905 o
+108 172.351 o
 grestore
 gsave
-62.843750 170.108231 translate
+81.921875 168.553679 translate
 0.000000 rotate
 0.000000 0.000000 m /five glyphshow
 6.362305 0.000000 m /zero glyphshow
 12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -891,18 +888,15 @@ grestore
 stroke
 grestore
 } bind def
-108 264.29 o
+108 261.181 o
 grestore
 gsave
-56.484375 260.493338 translate
+75.562500 257.384233 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /zero glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
-38.173828 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -922,18 +916,15 @@ grestore
 stroke
 grestore
 } bind def
-108 354.675 o
+108 350.012 o
 grestore
 gsave
-56.484375 350.878444 translate
+75.562500 346.214788 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /five glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
-38.173828 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -953,21 +944,18 @@ grestore
 stroke
 grestore
 } bind def
-108 445.06 o
+108 438.842 o
 grestore
 gsave
-56.484375 441.263551 translate
+75.562500 435.045342 translate
 0.000000 rotate
 0.000000 0.000000 m /two glyphshow
 6.362305 0.000000 m /zero glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
-38.173828 0.000000 m /zero glyphshow
 grestore
 gsave
-50.406250 224.370000 translate
+69.484375 224.370000 translate
 90.000000 rotate
 0.000000 0.000000 m /I glyphshow
 2.949219 0.000000 m /s glyphshow

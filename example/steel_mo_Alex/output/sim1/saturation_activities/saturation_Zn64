@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/saturation_activities/saturation_Zn64
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:07:43 2020
+%%CreationDate: Sun Mar 14 15:43:25 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -936,15 +936,13 @@ grestore
 stroke
 grestore
 } bind def
-108 137.586 o
+108 148.765 o
 grestore
 gsave
-75.562500 133.789473 translate
+88.281250 144.968223 translate
 0.000000 rotate
 0.000000 0.000000 m /two glyphshow
 6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -964,15 +962,13 @@ grestore
 stroke
 grestore
 } bind def
-108 191.653 o
+108 214.01 o
 grestore
 gsave
-75.562500 187.855821 translate
+88.281250 210.213321 translate
 0.000000 rotate
 0.000000 0.000000 m /four glyphshow
 6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -992,15 +988,13 @@ grestore
 stroke
 grestore
 } bind def
-108 245.719 o
+108 279.255 o
 grestore
 gsave
-75.562500 241.922169 translate
+88.281250 275.458419 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
 6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1020,15 +1014,13 @@ grestore
 stroke
 grestore
 } bind def
-108 299.785 o
+108 344.5 o
 grestore
 gsave
-75.562500 295.988517 translate
+88.281250 340.703517 translate
 0.000000 rotate
 0.000000 0.000000 m /eight glyphshow
 6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1048,16 +1040,14 @@ grestore
 stroke
 grestore
 } bind def
-108 353.852 o
+108 409.745 o
 grestore
 gsave
-69.203125 350.054865 translate
+81.921875 405.948615 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /zero glyphshow
 12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1077,48 +1067,17 @@ grestore
 stroke
 grestore
 } bind def
-108 407.918 o
+108 474.991 o
 grestore
 gsave
-69.203125 404.121213 translate
+81.921875 471.193713 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /two glyphshow
 12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
 grestore
 gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 461.984 o
-grestore
-gsave
-69.203125 458.187561 translate
-0.000000 rotate
-0.000000 0.000000 m /one glyphshow
-6.362305 0.000000 m /four glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-grestore
-gsave
-63.125000 254.221563 translate
+75.843750 254.221563 translate
 90.000000 rotate
 0.000000 0.000000 m /A glyphshow
 6.840820 0.000000 m /c glyphshow

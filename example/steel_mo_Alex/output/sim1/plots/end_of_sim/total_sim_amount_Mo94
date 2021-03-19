@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/plots/end_of_sim/total_sim_amount_Mo94
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:09:25 2020
+%%CreationDate: Sun Mar 14 15:44:02 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -940,73 +940,13 @@ grestore
 stroke
 grestore
 } bind def
-108 112.156 o
+108 89.875 o
 grestore
 gsave
-62.843750 108.359375 translate
-0.000000 rotate
-0.000000 0.000000 m /five glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 183.109 o
-grestore
-gsave
-62.843750 179.312500 translate
-0.000000 rotate
-0.000000 0.000000 m /five glyphshow
-6.362305 0.000000 m /five glyphshow
-12.724609 0.000000 m /zero glyphshow
-19.086914 0.000000 m /zero glyphshow
-25.449219 0.000000 m /zero glyphshow
-31.811523 0.000000 m /zero glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 254.062 o
-grestore
-gsave
-62.843750 250.265625 translate
+62.843750 86.078125 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
-6.362305 0.000000 m /zero glyphshow
+6.362305 0.000000 m /six glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
 25.449219 0.000000 m /zero glyphshow
@@ -1030,13 +970,13 @@ grestore
 stroke
 grestore
 } bind def
-108 325.016 o
+108 166.188 o
 grestore
 gsave
-62.843750 321.218750 translate
+62.843750 162.390625 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
-6.362305 0.000000 m /five glyphshow
+6.362305 0.000000 m /eight glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
 25.449219 0.000000 m /zero glyphshow
@@ -1060,10 +1000,10 @@ grestore
 stroke
 grestore
 } bind def
-108 395.969 o
+108 242.562 o
 grestore
 gsave
-62.843750 392.171875 translate
+62.843750 238.765625 translate
 0.000000 rotate
 0.000000 0.000000 m /seven glyphshow
 6.362305 0.000000 m /zero glyphshow
@@ -1090,13 +1030,73 @@ grestore
 stroke
 grestore
 } bind def
-108 466.922 o
+108 318.938 o
 grestore
 gsave
-62.843750 463.125000 translate
+62.843750 315.140625 translate
 0.000000 rotate
 0.000000 0.000000 m /seven glyphshow
-6.362305 0.000000 m /five glyphshow
+6.362305 0.000000 m /two glyphshow
+12.724609 0.000000 m /zero glyphshow
+19.086914 0.000000 m /zero glyphshow
+25.449219 0.000000 m /zero glyphshow
+31.811523 0.000000 m /zero glyphshow
+grestore
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 395.25 o
+grestore
+gsave
+62.843750 391.453125 translate
+0.000000 rotate
+0.000000 0.000000 m /seven glyphshow
+6.362305 0.000000 m /four glyphshow
+12.724609 0.000000 m /zero glyphshow
+19.086914 0.000000 m /zero glyphshow
+25.449219 0.000000 m /zero glyphshow
+31.811523 0.000000 m /zero glyphshow
+grestore
+gsave
+/o {
+gsave
+newpath
+translate
+0.8 setlinewidth
+1 setlinejoin
+0 setlinecap
+0 0 m
+-3.5 0 l
+
+gsave
+0.000 setgray
+fill
+grestore
+stroke
+grestore
+} bind def
+108 471.625 o
+grestore
+gsave
+62.843750 467.828125 translate
+0.000000 rotate
+0.000000 0.000000 m /seven glyphshow
+6.362305 0.000000 m /six glyphshow
 12.724609 0.000000 m /zero glyphshow
 19.086914 0.000000 m /zero glyphshow
 25.449219 0.000000 m /zero glyphshow
@@ -1153,10 +1153,10 @@ grestore
 0.122 0.467 0.706 setrgbcolor
 gsave
 669.6 443.5 108 63.36 clipbox
-138.436364 486.71875 m
-139.139553 83.53125 l
-747.163636 83.53125 l
-747.163636 83.53125 l
+138.436364 486.6875 m
+139.139553 83.5 l
+747.163636 83.5 l
+747.163636 83.5 l
 stroke
 grestore
 0.800 setlinewidth
@@ -1164,13 +1164,13 @@ grestore
 [] 0 setdash
 0.000 setgray
 gsave
-108 63.359375 m
-108 506.890625 l
+108 63.375 m
+108 506.875 l
 stroke
 grestore
 gsave
-777.6 63.359375 m
-777.6 506.890625 l
+777.6 63.375 m
+777.6 506.875 l
 stroke
 grestore
 gsave

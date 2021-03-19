@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/plots/end_of_sim/total_sim_amount_Fe57
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:09:16 2020
+%%CreationDate: Sun Mar 14 15:43:58 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -969,37 +969,10 @@ grestore
 stroke
 grestore
 } bind def
-108 76.6173 o
+108 83.4609 o
 grestore
 gsave
-85.093750 72.820435 translate
-0.000000 rotate
-0.000000 0.000000 m /five glyphshow
-6.362305 0.000000 m /period glyphshow
-9.541016 0.000000 m /five glyphshow
-grestore
-gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 134.136 o
-grestore
-gsave
-85.093750 130.338989 translate
+85.093750 79.664062 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1023,10 +996,10 @@ grestore
 stroke
 grestore
 } bind def
-108 191.654 o
+108 152.723 o
 grestore
 gsave
-85.093750 187.857529 translate
+85.093750 148.925781 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1050,10 +1023,10 @@ grestore
 stroke
 grestore
 } bind def
-108 249.173 o
+108 221.984 o
 grestore
 gsave
-85.093750 245.376068 translate
+85.093750 218.187500 translate
 0.000000 rotate
 0.000000 0.000000 m /seven glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1077,10 +1050,10 @@ grestore
 stroke
 grestore
 } bind def
-108 306.692 o
+108 291.244 o
 grestore
 gsave
-85.093750 302.894638 translate
+85.093750 287.447266 translate
 0.000000 rotate
 0.000000 0.000000 m /seven glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1104,10 +1077,10 @@ grestore
 stroke
 grestore
 } bind def
-108 364.21 o
+108 360.504 o
 grestore
 gsave
-85.093750 360.413193 translate
+85.093750 356.707031 translate
 0.000000 rotate
 0.000000 0.000000 m /eight glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1131,10 +1104,10 @@ grestore
 stroke
 grestore
 } bind def
-108 421.729 o
+108 429.766 o
 grestore
 gsave
-85.093750 417.931732 translate
+85.093750 425.968750 translate
 0.000000 rotate
 0.000000 0.000000 m /eight glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1158,10 +1131,10 @@ grestore
 stroke
 grestore
 } bind def
-108 479.247 o
+108 499.025 o
 grestore
 gsave
-85.093750 475.450302 translate
+85.093750 495.228516 translate
 0.000000 rotate
 0.000000 0.000000 m /nine glyphshow
 6.362305 0.000000 m /period glyphshow
@@ -1198,32 +1171,34 @@ gsave
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /e glyphshow
-12.514648 0.000000 m /one glyphshow
-18.876953 0.000000 m /zero glyphshow
-25.239258 0.000000 m /plus glyphshow
-33.618164 0.000000 m /one glyphshow
-39.980469 0.000000 m /period glyphshow
-43.159180 0.000000 m /zero glyphshow
-49.521484 0.000000 m /seven glyphshow
-55.883789 0.000000 m /nine glyphshow
-62.246094 0.000000 m /four glyphshow
-68.608398 0.000000 m /five glyphshow
-74.970703 0.000000 m /three glyphshow
-81.333008 0.000000 m /five glyphshow
-87.695312 0.000000 m /seven glyphshow
-94.057617 0.000000 m /e glyphshow
-100.209961 0.000000 m /one glyphshow
-106.572266 0.000000 m /nine glyphshow
+12.514648 0.000000 m /eight glyphshow
+18.876953 0.000000 m /plus glyphshow
+27.255859 0.000000 m /one glyphshow
+33.618164 0.000000 m /period glyphshow
+36.796875 0.000000 m /zero glyphshow
+43.159180 0.000000 m /seven glyphshow
+49.521484 0.000000 m /nine glyphshow
+55.883789 0.000000 m /four glyphshow
+62.246094 0.000000 m /five glyphshow
+68.608398 0.000000 m /three glyphshow
+74.970703 0.000000 m /five glyphshow
+81.333008 0.000000 m /seven glyphshow
+87.695312 0.000000 m /five glyphshow
+94.057617 0.000000 m /five glyphshow
+100.419922 0.000000 m /e glyphshow
+106.572266 0.000000 m /one glyphshow
+112.934570 0.000000 m /nine glyphshow
 grestore
 1.500 setlinewidth
 2 setlinecap
 0.122 0.467 0.706 setrgbcolor
 gsave
 669.6 443.5 108 63.36 clipbox
-138.436364 83.519989 m
-139.139553 485.07869 l
-747.163636 486.720001 l
-747.163636 486.720001 l
+138.436364 83.517578 m
+139.139553 485.175781 l
+510.034244 486.117188 l
+747.163636 486.71875 l
+747.163636 486.71875 l
 stroke
 grestore
 0.800 setlinewidth
@@ -1231,13 +1206,13 @@ grestore
 [] 0 setdash
 0.000 setgray
 gsave
-108 63.360001 m
-108 506.87999 l
+108 63.357422 m
+108 506.878906 l
 stroke
 grestore
 gsave
-777.6 63.360001 m
-777.6 506.87999 l
+777.6 63.357422 m
+777.6 506.878906 l
 stroke
 grestore
 gsave

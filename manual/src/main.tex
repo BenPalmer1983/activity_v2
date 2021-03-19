@@ -1,0 +1,87 @@
+\documentclass[12pt,twoside]{manual}
+
+\pagestyle{plain}
+\begin{document}
+
+%%######################################################################
+%% Styles
+%%######################################################################
+
+\include{tikz}
+
+
+
+%%######################################################################
+%% Cover Page
+%%######################################################################
+
+\begin{titlepage}
+  \begin{center}
+    \centerline{\includegraphics[width=0.7\textwidth]{images/Cover_Art}}
+
+
+    \textbf{Department of Metallurgy \& Materials}
+
+    \vspace*{2.0cm}
+    \Large{}
+    \textbf{Activity V2 Manual}
+    \vspace{0.8cm}
+    \normalsize{}
+
+  \end{center}
+\end{titlepage}
+
+\pagenumbering{gobble}
+
+\pagenumbering{roman} 
+
+\tableofcontents
+
+\pagenumbering{arabic}
+
+
+
+
+%%######################################################################
+%% Overview
+%%######################################################################
+
+\chapter{Overview}
+
+\section{Reason for the Program}
+
+The Activity program calculates how radioactive a target becomes after being irradiated by high energy ions.  It uses the TENDL-2019 database that contains cross-section data for protons and deuterons, and the JEFF-3.3 Radioactive Decay Data File.
+
+\section{Program Requirements}
+
+The user must provide a exyz file from the SRIM ion transport program and a breakdown of the composition of the target, as well as other irradiation parameters.
+
+
+
+%%######################################################################
+%% Installation
+%%######################################################################
+
+\chapter{Installation}
+
+The program needs Python 3 installed in order to run.  At the time of writing, it has only been developed to run on a Linux operating system, but it shouldn't require much adjusting to run on a Windows computer too.
+
+Download and install the latest version of Python 3:
+
+https://www.python.org/downloads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

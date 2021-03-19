@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/plots/in_beam/in_beam_activity_Tc98
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:08:53 2020
+%%CreationDate: Sun Mar 14 15:43:52 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -1066,10 +1066,10 @@ grestore
 stroke
 grestore
 } bind def
-108 153.589 o
+108 152.384 o
 grestore
 gsave
-94.640625 149.792281 translate
+94.640625 148.587147 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 grestore
@@ -1091,10 +1091,10 @@ grestore
 stroke
 grestore
 } bind def
-108 223.658 o
+108 221.248 o
 grestore
 gsave
-94.640625 219.861436 translate
+94.640625 217.451168 translate
 0.000000 rotate
 0.000000 0.000000 m /two glyphshow
 grestore
@@ -1116,10 +1116,10 @@ grestore
 stroke
 grestore
 } bind def
-108 293.727 o
+108 290.112 o
 grestore
 gsave
-94.640625 289.930592 translate
+94.640625 286.315190 translate
 0.000000 rotate
 0.000000 0.000000 m /three glyphshow
 grestore
@@ -1141,10 +1141,10 @@ grestore
 stroke
 grestore
 } bind def
-108 363.797 o
+108 358.976 o
 grestore
 gsave
-94.640625 359.999747 translate
+94.640625 355.179211 translate
 0.000000 rotate
 0.000000 0.000000 m /four glyphshow
 grestore
@@ -1166,10 +1166,10 @@ grestore
 stroke
 grestore
 } bind def
-108 433.866 o
+108 427.84 o
 grestore
 gsave
-94.640625 430.068903 translate
+94.640625 424.043233 translate
 0.000000 rotate
 0.000000 0.000000 m /five glyphshow
 grestore
@@ -1191,10 +1191,10 @@ grestore
 stroke
 grestore
 } bind def
-108 503.935 o
+108 496.704 o
 grestore
 gsave
-94.640625 500.138058 translate
+94.640625 492.907254 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
 grestore
@@ -1221,7 +1221,8 @@ gsave
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /e glyphshow
 12.514648 0.000000 m /minus glyphshow
-20.893555 0.000000 m /nine glyphshow
+20.893555 0.000000 m /one glyphshow
+27.255859 0.000000 m /two glyphshow
 grestore
 1.500 setlinewidth
 2 setlinecap

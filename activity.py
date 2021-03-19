@@ -1532,12 +1532,13 @@ class sim:
     print()
     print("End of Beam")
     print("===================")     
-    for key in g.sims[k]['tally_beam_end'].keys():    
-      print(std.pad_right(key, 10) + "  ", end="")
-      print(std.pad_right(isotopes.get_readable(key), 10) + "  ", end="")
-      print(std.pad_right(g.sims[k]['tally_beam_end'][key], 25), end="")
-      isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_beam_end'][key]
-      print(std.pad_right(isotope_activity, 25))
+    for key in g.sims[k]['tally_beam_end'].keys():  
+      if(g.sims[k]['tally_beam_end'][key] > 0.0):  
+        print(std.pad_right(key, 10) + "  ", end="")
+        print(std.pad_right(isotopes.get_readable(key), 10) + "  ", end="")
+        print(std.pad_right(g.sims[k]['tally_beam_end'][key], 25), end="")
+        isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_beam_end'][key]
+        print(std.pad_right(isotope_activity, 25))
     print() 
     
     log.title("End of Beam Tally")  
@@ -1628,11 +1629,12 @@ class sim:
     print("End of Sim")
     print("===================")     
     for key in g.sims[k]['tally_sim_end'].keys():
-      isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]
-      print(std.pad_right(key, 10) + "  ", end="")
-      print(std.pad_right(isotopes.get_readable(key), 10) + "  ", end="")
-      print(std.pad_right(g.sims[k]['tally_sim_end'][key], 25), end="")
-      print(std.pad_right(isotope_activity, 25))
+      if(g.sims[k]['tally_sim_end'][key] > 0.0):
+        isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]
+        print(std.pad_right(key, 10) + "  ", end="")
+        print(std.pad_right(isotopes.get_readable(key), 10) + "  ", end="")
+        print(std.pad_right(g.sims[k]['tally_sim_end'][key], 25), end="")
+        print(std.pad_right(isotope_activity, 25))
     print() 
     
     log.title("End of Sim Tally")  
@@ -1711,6 +1713,16 @@ class sim:
     plt.ylabel('Activity (Bq)')
     plt.plot(total_activity[:,0], total_activity[:,1])
     plt.savefig('output/' + k + '/plots/total_activity/' + 'total_sim_total_activity', format='eps')
+    plt.close('all') 
+    
+    plt.clf()
+    plt.figure(figsize=(12,8))    
+    plt.title('Total Activity Throughout Simulation')
+    plt.xlabel('Time (s)')
+    plt.ylabel('Activity (Bq)')
+    plt.yscale('log')
+    plt.plot(total_activity[:,0], total_activity[:,1])
+    plt.savefig('output/' + k + '/plots/total_activity/' + 'total_sim_total_activity_log', format='eps')
     plt.close('all') 
     
 ###########################

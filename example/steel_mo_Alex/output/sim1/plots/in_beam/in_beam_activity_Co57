@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/plots/in_beam/in_beam_activity_Co57
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Fri Dec  4 23:08:11 2020
+%%CreationDate: Sun Mar 14 15:43:35 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -995,14 +995,12 @@ grestore
 stroke
 grestore
 } bind def
-108 156.545 o
+108 176.951 o
 grestore
 gsave
-81.921875 152.748358 translate
+94.640625 173.154029 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1022,14 +1020,12 @@ grestore
 stroke
 grestore
 } bind def
-108 229.57 o
+108 270.382 o
 grestore
 gsave
-81.921875 225.773591 translate
+94.640625 266.584933 translate
 0.000000 rotate
 0.000000 0.000000 m /two glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1049,14 +1045,12 @@ grestore
 stroke
 grestore
 } bind def
-108 302.596 o
+108 363.813 o
 grestore
 gsave
-81.921875 298.798825 translate
+94.640625 360.015838 translate
 0.000000 rotate
 0.000000 0.000000 m /three glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
 grestore
 gsave
 /o {
@@ -1076,44 +1070,15 @@ grestore
 stroke
 grestore
 } bind def
-108 375.621 o
+108 457.244 o
 grestore
 gsave
-81.921875 371.824058 translate
+94.640625 453.446742 translate
 0.000000 rotate
 0.000000 0.000000 m /four glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
 grestore
 gsave
-/o {
-gsave
-newpath
-translate
-0.8 setlinewidth
-1 setlinejoin
-0 setlinecap
-0 0 m
--3.5 0 l
-
-gsave
-0.000 setgray
-fill
-grestore
-stroke
-grestore
-} bind def
-108 448.646 o
-grestore
-gsave
-81.921875 444.849291 translate
-0.000000 rotate
-0.000000 0.000000 m /five glyphshow
-6.362305 0.000000 m /zero glyphshow
-12.724609 0.000000 m /zero glyphshow
-grestore
-gsave
-75.843750 254.221563 translate
+88.562500 254.221563 translate
 90.000000 rotate
 0.000000 0.000000 m /A glyphshow
 6.840820 0.000000 m /c glyphshow
