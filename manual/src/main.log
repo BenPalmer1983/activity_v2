@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.14)  18 MAR 2021 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.14)  20 MAR 2021 03:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1564,6 +1564,9 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (/usr/share/texlive/texmf-dist/tex/latex/textgreek/textgreek.sty
 Package: textgreek 2011/10/09 v0.7 Greek symbols in text
 Package textgreek Info: Loading the definitions for the Greek fontencoding. on 
@@ -2475,17 +2478,17 @@ ABD: EveryShipout initializing macros
 \openout2 = `tikz.aux'.
 
  (./tikz.tex)
-<images/Cover_Art.png, id=4, 445.665pt x 481.8pt>
-File: images/Cover_Art.png Graphic file (type png)
-<use images/Cover_Art.png>
-Package pdftex.def Info: images/Cover_Art.png  used on input line 13.
+<img/coverart.png, id=4, 445.665pt x 481.8pt>
+File: img/coverart.png Graphic file (type png)
+<use img/coverart.png>
+Package pdftex.def Info: img/coverart.png  used on input line 59.
 (pdftex.def)             Requested size: 338.58632pt x 366.03946pt.
 <<ot1.cmap>> [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/Cover_Art.png>] (
-./main.toc<<oml.cmap>><<oms.cmap>><<omx.cmap>>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/coverart.png>] (./ma
+in.toc<<oml.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -2510,26 +2513,207 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Chapter 1.
 [2
 
-] (./main.aux (./tikz.aux))
+]
+Chapter 2.
+<img/installdir.png, id=23, 989.6975pt x 631.35875pt>
+File: img/installdir.png Graphic file (type png)
+<use img/installdir.png>
+Package pdftex.def Info: img/installdir.png  used on input line 122.
+(pdftex.def)             Requested size: 494.84753pt x 315.6786pt.
+
+Overfull \hbox (11.15067pt too wide) in paragraph at lines 122--123
+ [] 
+ []
+
+[3
+
+ <./img/installdir.png>]
+Chapter 3.
+<img/srim1.png, id=29, 593.96906pt x 488.57532pt>
+File: img/srim1.png Graphic file (type png)
+<use img/srim1.png>
+Package pdftex.def Info: img/srim1.png  used on input line 145.
+(pdftex.def)             Requested size: 296.9838pt x 244.28706pt.
+<img/srim2.png, id=30, 750.55406pt x 545.03625pt>
+File: img/srim2.png Graphic file (type png)
+<use img/srim2.png>
+Package pdftex.def Info: img/srim2.png  used on input line 151.
+(pdftex.def)             Requested size: 300.21631pt x 218.01064pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<img/srim3.png, id=31, 422.32782pt x 329.73187pt>
+File: img/srim3.png Graphic file (type png)
+<use img/srim3.png>
+Package pdftex.def Info: img/srim3.png  used on input line 157.
+(pdftex.def)             Requested size: 253.39864pt x 197.84064pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4
+
+ <./img/srim1.png>]
+<img/activityexample1.png, id=35, 834.11626pt x 668.4975pt>
+File: img/activityexample1.png Graphic file (type png)
+<use img/activityexample1.png>
+Package pdftex.def Info: img/activityexample1.png  used on input line 171.
+(pdftex.def)             Requested size: 333.6406pt x 267.39426pt.
+ [5 <./img/srim2.png> <./img/srim3.png>]<<ot1tt.cmap>>
+<img/output1.png, id=40, 805.0075pt x 458.71375pt>
+File: img/output1.png Graphic file (type png)
+<use img/output1.png>
+Package pdftex.def Info: img/output1.png  used on input line 206.
+(pdftex.def)             Requested size: 241.50412pt x 137.61519pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: img/output1.png Graphic file (type png)
+<use img/output1.png>
+Package pdftex.def Info: img/output1.png  used on input line 212.
+(pdftex.def)             Requested size: 241.50412pt x 137.61519pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./img/activityexample1.png>]
+Package epstopdf Info: Source file: <img/end_of_beam_gamma_lines.eps>
+(epstopdf)                    date: 2021-03-19 18:28:10
+(epstopdf)                    size: 43977 bytes
+(epstopdf)             Output file: <img/end_of_beam_gamma_lines-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2021-03-20 02:20:01
+(epstopdf)                    size: 41179 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/end_of_beam_gamma_line
+s-eps-converted-to.pdf img/end_of_beam_gamma_lines.eps>
+(epstopdf)             \includegraphics on input line 224.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./img/end_of_beam_gamma_lines-eps-converted-to.p
+df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/end_of_beam_gamma_lines-eps-converted-to.pdf, id=48, 867.24pt x 578.16pt>
+File: img/end_of_beam_gamma_lines-eps-converted-to.pdf Graphic file (type pdf)
+<use img/end_of_beam_gamma_lines-eps-converted-to.pdf>
+Package pdftex.def Info: img/end_of_beam_gamma_lines-eps-converted-to.pdf  used
+ on input line 224.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+Package epstopdf Info: Source file: <img/end_of_sim_gamma_lines.eps>
+(epstopdf)                    date: 2021-03-19 18:28:10
+(epstopdf)                    size: 42892 bytes
+(epstopdf)             Output file: <img/end_of_sim_gamma_lines-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2021-03-20 02:20:01
+(epstopdf)                    size: 39135 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/end_of_sim_gamma_lines
+-eps-converted-to.pdf img/end_of_sim_gamma_lines.eps>
+(epstopdf)             \includegraphics on input line 230.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./img/end_of_sim_gamma_lines-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/end_of_sim_gamma_lines-eps-converted-to.pdf, id=49, 867.24pt x 578.16pt>
+File: img/end_of_sim_gamma_lines-eps-converted-to.pdf Graphic file (type pdf)
+<use img/end_of_sim_gamma_lines-eps-converted-to.pdf>
+Package pdftex.def Info: img/end_of_sim_gamma_lines-eps-converted-to.pdf  used 
+on input line 230.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <img/total_sim_total_activity_log.eps>
+(epstopdf)                    date: 2021-03-19 18:28:10
+(epstopdf)                    size: 23889 bytes
+(epstopdf)             Output file: <img/total_sim_total_activity_log-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2021-03-20 02:22:51
+(epstopdf)                    size: 14979 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/total_sim_total_activi
+ty_log-eps-converted-to.pdf img/total_sim_total_activity_log.eps>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./img/total_sim_total_activity_log-eps-converted
+-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
+owed
+<img/total_sim_total_activity_log-eps-converted-to.pdf, id=50, 867.24pt x 578.1
+6pt>
+File: img/total_sim_total_activity_log-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use img/total_sim_total_activity_log-eps-converted-to.pdf>
+Package pdftex.def Info: img/total_sim_total_activity_log-eps-converted-to.pdf 
+ used on input line 236.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./img/output1.png> <./img/end_of_beam_gamma_lines-eps-converted-to.pdf>]
+[8 <./img/end_of_sim_gamma_lines-eps-converted-to.pdf> <./img/total_sim_total_a
+ctivity_log-eps-converted-to.pdf>]
+Chapter 4.
+[9
+
+] [10]
+Chapter 5.
+[11
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 371.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 371.
+
+
+LaTeX Warning: Citation 'stehfest' on page 12 undefined on input line 411.
+
+
+LaTeX Warning: Reference `fig:po218decay' on page 12 undefined on input line 41
+1.
+
+[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+[15] [16] [17] (./main.aux (./tikz.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37935 strings out of 492982
- 750586 string characters out of 6134895
- 1029225 words of memory out of 5000000
- 40918 multiletter control sequences out of 15000+600000
- 535019 words of font info for 42 fonts, out of 8000000 for 9000
+ 38586 strings out of 492982
+ 762556 string characters out of 6134895
+ 1154269 words of memory out of 5000000
+ 41542 multiletter control sequences out of 15000+600000
+ 535831 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,69p,10368b,742s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,23n,69p,10368b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on main.pdf (3 pages, 348341 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (18 pages, 893227 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 251 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 34 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -28,6 +28,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{lscape}
+\usepackage{placeins}
 
 
 % Equation packages
@@ -124,6 +125,40 @@ sorting=none]{biblatex}
 
 
 
+
+
+\usepackage{color}
+\definecolor{red}{rgb}{1.0,0,0}
+\definecolor{green}{rgb}{0,1.0,0}
+\definecolor{blue}{rgb}{0,0,1.0}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{grey}{rgb}{0.5,0.5,0.5}
+\definecolor{light-gray}{rgb}{0.9,0.9,0.9}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{white}{rgb}{1.0,1.0,1.0}
+
+
+\definecolor{blueA}{RGB}{0,34,102}
+\definecolor{blueB}{RGB}{0,43,128}
+\definecolor{blueC}{RGB}{0,51,153}
+\definecolor{blueD}{RGB}{0,60,179}
+\definecolor{blueE}{RGB}{0,68,204}
+\definecolor{blueF}{RGB}{0,77,230}
+
+
+
+
+\definecolor{greyDDD}{rgb}{0.2,0.2,0.2}
+\definecolor{greyDD}{rgb}{0.3,0.3,0.3}
+\definecolor{greyD}{rgb}{0.4,0.4,0.4}
+\definecolor{greyL}{rgb}{0.6,0.6,0.6}
+\definecolor{greyLL}{rgb}{0.7,0.7,0.7}
+\definecolor{greyLLL}{rgb}{0.8,0.8,0.8}
+
+\definecolor{codegreen}{rgb}{0.0,0.258,0.0}
+\definecolor{codeblue}{rgb}{0.0,0.199,0.6}
+\definecolor{codepurple}{rgb}{0.398,0.0,1.0}
 
 
 

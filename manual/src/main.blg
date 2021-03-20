@@ -29,6 +29,7 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: main-blx.bib
+Warning--I didn't find a database entry for "stehfest"
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -36,8 +37,8 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Here's how much of BibTeX's memory you used:
  Cites:                 1 out of 750
  Fields:               11 out of 5000
- Hash table:        99392 out of 100000
- Strings:            1177 out of 100000
- Free string pool:   8555 out of 65000
+ Hash table:        99391 out of 100000
+ Strings:            1178 out of 100000
+ Free string pool:   8563 out of 65000
  Wizard functions:   6268 out of 9000
 (There was 1 error message)
