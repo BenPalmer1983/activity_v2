@@ -93,7 +93,7 @@ The Activity program calculates how radioactive a target becomes after being irr
 
 \section{Program Requirements}
 
-The user must provide a exyz file from the SRIM\cite{srim} ion transport program and a breakdown of the composition of the target, as well as other irradiation parameters.
+The user must provide a exyz file from the SRIM\cite{srim} ion transport program and a breakdown of the composition of the target, as well as other irradiation parameters (beam projectile, beam duration, beam area, target thickness, target composition, simulation end time etc).
 
 
 
@@ -768,7 +768,9 @@ The current data file is for Protons, and the range of energies (for Fe-54 and F
 As the energies do not cover the full range of possible energies for our own cyclotron, it would be desirable to use the TALYS program to calculate the reaction cross sections for a range up to at least 100MeV (for Protons, Deuterons, Helium 3 and Helium 4 ions) and save this cross section data into an alternate database.
 
 
+\section{Gamma Dose}
 
+The gamma dose received by an average human at a set distance from the sample will be calculated and output by the code in a future update.
 
 
 

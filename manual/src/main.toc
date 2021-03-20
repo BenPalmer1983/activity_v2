@@ -39,3 +39,5 @@
 \contentsline {chapter}{\numberline {6}Future Plans}{19}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Selection of Cross Section Databases}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Gamma Dose}{19}
