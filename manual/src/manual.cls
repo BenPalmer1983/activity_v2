@@ -44,8 +44,12 @@
 bibstyle=numeric,
 hyperref=true,
 sorting=none]{biblatex}
-\bibliography{bib/activity.bib}     %% CHANGE BIB FILE HERE
+
+\bibliography{manual.bib}  
+
 \usepackage{notoccite}
+
+
 
 %% Page settings
 \pagenumbering{arabic}
@@ -159,7 +163,6 @@ sorting=none]{biblatex}
 \definecolor{codegreen}{rgb}{0.0,0.258,0.0}
 \definecolor{codeblue}{rgb}{0.0,0.199,0.6}
 \definecolor{codepurple}{rgb}{0.398,0.0,1.0}
-
 
 
 

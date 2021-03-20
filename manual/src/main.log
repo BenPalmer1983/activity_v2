@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.14)  20 MAR 2021 03:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.14)  20 MAR 2021 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2649,52 +2649,118 @@ Package pdftex.def Info: img/total_sim_total_activity_log-eps-converted-to.pdf
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7 <./img/output1.png> <./img/end_of_beam_gamma_lines-eps-converted-to.pdf>]
-[8 <./img/end_of_sim_gamma_lines-eps-converted-to.pdf> <./img/total_sim_total_a
-ctivity_log-eps-converted-to.pdf>]
-Chapter 4.
-[9
+Package epstopdf Info: Source file: <img/ion_energy_lost.eps>
+(epstopdf)                    date: 2021-03-17 15:31:45
+(epstopdf)                    size: 22948 bytes
+(epstopdf)             Output file: <img/ion_energy_lost-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-20 04:25:34
+(epstopdf)                    size: 11534 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/ion_energy_lost-eps-co
+nverted-to.pdf img/ion_energy_lost.eps>
+(epstopdf)             \includegraphics on input line 247.
+Package epstopdf Info: Output file is already uptodate.
 
-] [10]
+
+pdfTeX warning: pdflatex (file ./img/ion_energy_lost-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/ion_energy_lost-eps-converted-to.pdf, id=94, 867.24pt x 578.16pt>
+File: img/ion_energy_lost-eps-converted-to.pdf Graphic file (type pdf)
+<use img/ion_energy_lost-eps-converted-to.pdf>
+Package pdftex.def Info: img/ion_energy_lost-eps-converted-to.pdf  used on inpu
+t line 247.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+Package epstopdf Info: Source file: <img/saturation_Co55.eps>
+(epstopdf)                    date: 2021-03-17 15:31:54
+(epstopdf)                    size: 23359 bytes
+(epstopdf)             Output file: <img/saturation_Co55-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-20 04:26:31
+(epstopdf)                    size: 14671 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/saturation_Co55-eps-co
+nverted-to.pdf img/saturation_Co55.eps>
+(epstopdf)             \includegraphics on input line 257.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./img/saturation_Co55-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/saturation_Co55-eps-converted-to.pdf, id=95, 867.24pt x 578.16pt>
+File: img/saturation_Co55-eps-converted-to.pdf Graphic file (type pdf)
+<use img/saturation_Co55-eps-converted-to.pdf>
+Package pdftex.def Info: img/saturation_Co55-eps-converted-to.pdf  used on inpu
+t line 257.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <img/saturation_Fe55.eps>
+(epstopdf)                    date: 2021-03-17 15:31:55
+(epstopdf)                    size: 24656 bytes
+(epstopdf)             Output file: <img/saturation_Fe55-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-03-20 04:26:31
+(epstopdf)                    size: 15207 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/saturation_Fe55-eps-co
+nverted-to.pdf img/saturation_Fe55.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./img/saturation_Fe55-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/saturation_Fe55-eps-converted-to.pdf, id=96, 867.24pt x 578.16pt>
+File: img/saturation_Fe55-eps-converted-to.pdf Graphic file (type pdf)
+<use img/saturation_Fe55-eps-converted-to.pdf>
+Package pdftex.def Info: img/saturation_Fe55-eps-converted-to.pdf  used on inpu
+t line 264.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./img/end_of_sim_gamma_lines-eps-converted-to.pdf> <./img/total_sim_total_a
+ctivity_log-eps-converted-to.pdf> <./img/ion_energy_lost-eps-converted-to.pdf>]
+[9 <./img/saturation_Co55-eps-converted-to.pdf> <./img/saturation_Fe55-eps-conv
+erted-to.pdf>]
+Chapter 4.
+[10
+
+] [11]
 Chapter 5.
-[11
+[12
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 371.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 403.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 371.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 403.
 
 
-LaTeX Warning: Citation 'stehfest' on page 12 undefined on input line 411.
+LaTeX Warning: Reference `fig:po218decay' on page 13 undefined on input line 44
+3.
 
-
-LaTeX Warning: Reference `fig:po218decay' on page 12 undefined on input line 41
-1.
-
-[12] [13] [14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[13] [14] [15] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-[15] [16] [17] (./main.aux (./tikz.aux))
+[16] [17] [18]
+Chapter 6.
+[19
+
+] [20
+
+] (./main.aux (./tikz.aux))
 
 LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38586 strings out of 492982
- 762556 string characters out of 6134895
- 1154269 words of memory out of 5000000
- 41542 multiletter control sequences out of 15000+600000
+ 38620 strings out of 492982
+ 763775 string characters out of 6134895
+ 1154258 words of memory out of 5000000
+ 41573 multiletter control sequences out of 15000+600000
  535831 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,23n,69p,10368b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2710,10 +2776,10 @@ msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (18 pages, 893227 bytes).
+Output written on main.pdf (21 pages, 933779 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 365 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

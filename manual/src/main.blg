@@ -5,11 +5,6 @@ Release version: 3.71 (18 mar 2013)
 The 8-bit codepage and sorting file: 88591lat.csf
 The top-level auxiliary file: main.aux
 The style file: biblatex.bst
-I couldn't open database file bib/activity.bib
----line 5 of file main.aux
- : \bibdata{main-blx,bib/activity
- :                               }
-I'm skipping whatever remains of this command
 A level-1 auxilliary file: tikz.aux
 Reallocated glb_str_ptr (elt_size=8) to 10 items from 0.
 Reallocated global_strs (elt_size=20001) to 10 items from 0.
@@ -29,16 +24,15 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: main-blx.bib
-Warning--I didn't find a database entry for "stehfest"
+Database file #2: manual.bib
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 
 Here's how much of BibTeX's memory you used:
- Cites:                 1 out of 750
- Fields:               11 out of 5000
- Hash table:        99391 out of 100000
- Strings:            1178 out of 100000
- Free string pool:   8563 out of 65000
+ Cites:                 5 out of 750
+ Fields:              694 out of 5000
+ Hash table:        99384 out of 100000
+ Strings:            1202 out of 100000
+ Free string pool:   9163 out of 65000
  Wizard functions:   6268 out of 9000
-(There was 1 error message)

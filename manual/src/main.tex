@@ -89,11 +89,11 @@
 
 \section{Reason for the Program}
 
-The Activity program calculates how radioactive a target becomes after being irradiated by high energy ions.  It uses the TENDL-2019 database that contains cross-section data for protons and deuterons, and the JEFF-3.3 Radioactive Decay Data File.
+The Activity program calculates how radioactive a target becomes after being irradiated by high energy ions.  It uses the TENDL-2019\cite{tendl2019} database that contains cross-section data for protons and deuterons, and the JEFF-3.3 Radioactive Decay Data File\cite{jeff33}.
 
 \section{Program Requirements}
 
-The user must provide a exyz file from the SRIM ion transport program and a breakdown of the composition of the target, as well as other irradiation parameters.
+The user must provide a exyz file from the SRIM\cite{srim} ion transport program and a breakdown of the composition of the target, as well as other irradiation parameters.
 
 
 
@@ -238,6 +238,34 @@ Within each directory are various plots and data files, including the activity o
 \end{figure}
 
 
+\FloatBarrier
+
+The program analyses the exyz file and output a chart showing the distribution of energy lost by projectiles as they pass through the target.  
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.25]{img/ion_energy_lost.eps}
+  \end{center}
+\end{figure}
+
+As a target is irradiated, the residual radioactive isotopes begin to decay.  To begin with, the production outweighs the decay, but at a certain point there's enough of the radioactive isotope within the target that the decay balances with the production.  At this point the radioactive isotope in the target is saturated, and will not increase above this amount unless the beam parameters are adjusted.
+
+The saturation times depend on the isotope and the various reaction cross sections with the projectile.  The saturation plots for each radioactive isotope are created and saved by the program.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.25]{img/saturation_Co55.eps}
+  \end{center}
+  \caption{Saturation of Cobalt-55}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[scale=0.25]{img/saturation_Fe55.eps}
+  \end{center}
+  \caption{Saturation of Iron-55}
+\end{figure}
+
 
 \FloatBarrier
 
@@ -296,6 +324,10 @@ sim1 exyz="EXYZ.txt" target_composition=Fe,96.375,C,0.772,Cu,0.024,Mn,1.36,Ni,0.
 
 
 
+
+%%######################################################################
+%% Decay Equation
+%%######################################################################
 
 
 \chapter{Decay Equation}
@@ -697,6 +729,60 @@ class isotopes:
     return pa * t + sa / pc + sb * (-1)**(m-k+1)  
       
 \end{lstlisting}
+
+
+
+
+
+
+
+
+%%######################################################################
+%% Decay Equation
+%%######################################################################
+
+
+\chapter{Future Plans}
+
+\section{Selection of Cross Section Databases}
+
+The Scanditronix MC40 Cyclotron at the University of Birmingham has several beamlines and is capable of accelerating protons, deuterons, Helium 3 and Helium 4 and fluxes and energy ranges detailed below.  
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c c c c}
+\hline
+Particle & Energy (MeV) & Max Current (micro A) & Flux (ions per second)\\
+\hline
+p & 8-40 & 60 & $3.75 \times 10^14$ \\
+d & 8-40 & 30 & $1.87 \times 10^14$ \\
+${}^4 He^{2+}$ & 8-53 & 30 & $9.36 \times 10^13$ \\
+${}^3 He^{2+}$ & 4-20 & 60 & $1.87 \times 10^14$ \\
+\end{tabular}
+\end{center}
+\caption{Beam Characteristics of the Scanditronix MC-40}
+\end{table}
+
+The current data file is for Protons, and the range of energies (for Fe-54 and Fe-56 at the very least) only range up to 30MeV.  Previous versions of the TENDL data files have covered larger ranges (TENDL-2009 extended up to 200MeV).
+
+As the energies do not cover the full range of possible energies for our own cyclotron, it would be desirable to use the TALYS program to calculate the reaction cross sections for a range up to at least 100MeV (for Protons, Deuterons, Helium 3 and Helium 4 ions) and save this cross section data into an alternate database.
+
+
+
+
+
+
+
+%%######################################################################
+%% Bibliography
+%%######################################################################
+
+
+\printbibliography
+
+
+
+
 
 
 
