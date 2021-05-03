@@ -221,19 +221,21 @@ Within each directory are various plots and data files, including the activity o
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.25]{img/end_of_beam_gamma_lines.eps}
+    \includegraphics[scale=0.4]{img/end_of_beam_gamma_lines.eps}
   \end{center}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.25]{img/end_of_sim_gamma_lines.eps}
+    \includegraphics[scale=0.4]{img/end_of_sim_gamma_lines.eps}
   \end{center}
 \end{figure}
 
+\FloatBarrier
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.25]{img/total_sim_total_activity_log.eps}
+    \includegraphics[scale=0.4]{img/total_sim_total_activity_log.eps}
   \end{center}
 \end{figure}
 
@@ -244,7 +246,7 @@ The program analyses the exyz file and output a chart showing the distribution o
 
 \begin{figure}[h]
   \begin{center}
-    \includegraphics[scale=0.25]{img/ion_energy_lost.eps}
+    \includegraphics[scale=0.4]{img/ion_energy_lost.eps}
   \end{center}
 \end{figure}
 
@@ -265,6 +267,82 @@ The saturation times depend on the isotope and the various reaction cross sectio
   \end{center}
   \caption{Saturation of Iron-55}
 \end{figure}
+
+\FloatBarrier
+
+The program calculates the dose a human may receive from the target at the time it is removed from the beam, and at the time the simulation stops.
+
+\begin{lstlisting}[style=inputfile, caption={Predicted Dose}]
+Gamma Dose - Beam End
+===================================================
+
+Activity/Bq                     54.4306601689
+Power eV/s                      28342871818.2
+Power J/s                       4.54103823697e-09
+Dose Gy/s                       4.51575003676e-12
+Dose Gy/hr                      1.62567001323e-08
+Percentage of annual dose/hr    0.0142506237521
+
+Gamma Dose - Sim End
+===================================================
+
+Activity/Bq                     5.80221584491
+Energy eV/s                     2227911995.02
+Energy J/s                      3.56951604018e-10
+Dose Gy                         8.52319971389e-13
+Dose Gy/hr                      1.27786970412e-09
+Percentage of annual dose/hr    0.00112018061534
+
+
+Absorbed Dose Calculations
+===================================================
+Absorbed dose assumptions:
+1. radiation from point, emitted isotropically
+2. 80Kg human
+3. 1m from point source
+4. 1m squared surface area
+5. all energy absorbed
+
+
+Dose Limits
+===================================================
+employees 18+             20 millisieverts/year
+trainees 18+              6 millisieverts/year
+public and under 18s      1 millisievert/year
+public and under 18s      1.140771128E-04 millisieverts/hour
+
+Dose averaged over area of skin not exceeding 1cm2
+Source: http://www.hse.gov.uk/radiation/ionising/doses/
+\end{lstlisting}
+
+
+
+\FloatBarrier
+
+
+\section{Input Keywords}
+
+\begin{tabular}{p{3cm}p{3cm}p{7cm}}
+\textbf{Command} & \textbf{\textit{Sub Command}} & Description \\
+\hline
+\textbf{data} &  & data fields are input here \\
+\textbf{data} & isotopes & path to isotopes directory \\
+\textbf{data} & xs & path to cross section directory \\
+\textbf{sim1} &  & each simulation is numbered sequentially from 1 i.e. sim1 sim2 sim3... \\
+\textbf{sim1} & exyz & path to exyz SRIM file \\
+\textbf{sim1} & target\_composition & isotopes that make up the beam target \\
+\textbf{sim1} & target\_depth & the depth of material through which the beam passes \\
+\textbf{sim1} & target\_density & how dense (specify kgm3 or GCM3) \\
+\textbf{sim1} & beam\_projectile & currently, only "proton", but this could be extended in the future \\
+\textbf{sim1} & beam\_energy & energy of the protons/projectiles \\
+\textbf{sim1} & beam\_area & how much area the beam covers \\
+\textbf{sim1} & beam\_duration & how long the beam will be on for (specify s,minute,hour) t=0 to beam\_duration is the first part of the calculation \\
+\textbf{sim1} & end\_time & the time the calculation and final activity is measured after t=0 (specify s,minute,hour) end\_time to beam\_duration is the second part of the calculation \\
+
+\end{tabular}
+
+
+
 
 
 \FloatBarrier
@@ -601,8 +679,21 @@ g(t;k,m,\vec{\lambda})
 \end{split}
 \end{equation}
 
+\FloatBarrier
+\subsection{Preference: Analytic over Numeric}
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=15.0cm]{img/po218_po218.eps}
+		\captionsetup{font={it}}
+		\caption{Decay of Po-218: Analytice and Gaver-Stehfest Calculations \cite{jeff311}}
+		\label{fig:po218decay}
+	\end{center}
+\end{figure}
 
+The numeric solution only requires the equation to be solved in the s-domain; the Gaver-Stehfest algorithm performs the inversion.  It is worth the extra effort to derive and implement an analytic solution, as the numeric is only an approximation.  Examples of the pitfalls of the numeric solution are that it can give negative amounts of an isotope and the difference between the numeric and analytic calculated amounts can become quite large when the isotope decays away to a very small value.  Figure \ref{fig:po218decay} shows the predicted decay of a sample of Po-218 irradiated for 1,000s, and sampled until 10,000s.  In the region between 4,000s and 9,000s the amount from the numeric calculation drops below zero, whereas the analytic calculation remains above zero, as would be expected.
+
+\FloatBarrier
 
 \section{Python Isotopes Class}
 
@@ -767,10 +858,6 @@ The current data file is for Protons, and the range of energies (for Fe-54 and F
 
 As the energies do not cover the full range of possible energies for our own cyclotron, it would be desirable to use the TALYS program to calculate the reaction cross sections for a range up to at least 100MeV (for Protons, Deuterons, Helium 3 and Helium 4 ions) and save this cross section data into an alternate database.
 
-
-\section{Gamma Dose}
-
-The gamma dose received by an average human at a set distance from the sample will be calculated and output by the code in a future update.
 
 
 

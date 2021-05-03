@@ -1,7 +1,7 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%Title: output/sim1/saturation_activities/saturation_Mn53
 %%Creator: matplotlib version 2.1.1, http://matplotlib.org/
-%%CreationDate: Sun Mar 14 15:43:24 2021
+%%CreationDate: Sat May  1 16:57:29 2021
 %%Orientation: portrait
 %%BoundingBox: -126 108 738 684
 %%EndComments
@@ -1078,7 +1078,7 @@ grestore
 108 247.119 o
 grestore
 gsave
-81.921875 243.322142 translate
+81.921875 243.322143 translate
 0.000000 rotate
 0.000000 0.000000 m /six glyphshow
 6.362305 0.000000 m /zero glyphshow
@@ -1188,7 +1188,7 @@ grestore
 108 465.251 o
 grestore
 gsave
-75.562500 461.454165 translate
+75.562500 461.454166 translate
 0.000000 rotate
 0.000000 0.000000 m /one glyphshow
 6.362305 0.000000 m /four glyphshow

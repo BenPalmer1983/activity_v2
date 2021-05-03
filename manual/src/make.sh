@@ -57,6 +57,6 @@ pdflatex main.tex
 bibtex8 main
 # Build with bibliography
 pdflatex main.tex
-
+cp main.pdf ../../manual.pdf
 
 #################################################################################

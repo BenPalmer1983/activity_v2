@@ -32,19 +32,27 @@ class sim:
                 'end_time': None,
                 }
                 
-    # Make directories    
-    std.make_dir('output/' + k + '/plots')
-    std.make_dir('output/' + k + '/xs_data')
-    std.make_dir('output/' + k + '/results')
-    std.make_dir('output/' + k + '/gamma_lines')
-    std.make_dir('output/' + k + '/saturation_activities')
+    # Make directories   
+    sim.rd = 'output/' + k 
+    #std.make_dir('output/' + k + '/plots')
+    #std.make_dir('output/' + k + '/xs_data')
+    std.make_dir(sim.rd)
+    #std.make_dir('output/' + k + '/gamma_lines')
+    #std.make_dir('output/' + k + '/saturation_activities')
     
-    
-    std.make_dir('output/' + k + '/plots/in_beam')
-    std.make_dir('output/' + k + '/plots/end_of_sim')
-    std.make_dir('output/' + k + '/plots/total_activity')
-    std.make_dir('output/' + k + '/plots/xs_plots')
-    std.make_dir('output/' + k + '/plots/gamma_lines')
+    std.make_dir(sim.rd + '/activity_end_of_sim')
+    std.make_dir(sim.rd + '/activity_in_beam')
+    std.make_dir(sim.rd + '/amount_end_of_sim')
+    std.make_dir(sim.rd + '/amount_in_beam')
+    std.make_dir(sim.rd + '/xs_plots')
+    std.make_dir(sim.rd + '/gammas')
+    std.make_dir(sim.rd + '/xs_data')
+    std.make_dir(sim.rd + '/saturation_activities')
+    std.make_dir(sim.rd + '/tally')
+    std.make_dir(sim.rd + '/ion_energy')
+    std.make_dir(sim.rd + '/target')
+    std.make_dir(sim.rd + '/radioactive_isotopes')
+    std.make_dir(sim.rd + '/gamma_dose')
                 
     # Beam
     g.sims[k]['beam'] = beam()
@@ -139,7 +147,10 @@ class sim:
       log.log(std.pad_right(kn, 10) + "  " + std.pad_right(isotopes.get_readable(kn), 10) + "  " + std.pad_right(g.sims[k]['tally'][kn], 18))
     log.hr()
     
-    
+    fh = open(sim.rd + '/tally/starting_tally.txt', 'w')
+    for kn in g.sims[k]['tally'].keys():
+      fh.write(std.pad_right(kn, 10) + "  " + std.pad_right(isotopes.get_readable(kn), 10) + "  " + std.pad_right(g.sims[k]['tally'][kn], 18) + '\n')
+    fh.close()
     
     
 
@@ -150,6 +161,8 @@ class sim:
     print("===================") 
     
     
+    sim.rd = 'output/' + k 
+
     log.title("Run Sim", True)
     
  
@@ -192,7 +205,7 @@ class sim:
     plt.ylabel('')
     plt.title('Ion Energy Lost In Target')
     plt.grid(True)
-    plt.savefig('output/' + k + '/plots/ion_energy_lost.eps', format='eps')
+    plt.savefig(sim.rd + '/ion_energy/ion_energy_lost.eps', format='eps')
     plt.close('all') 
     
    
@@ -236,9 +249,10 @@ class sim:
         abs_sigma = abs_sigma + sigma**2
         
       if(abs_sigma > 0.0):
-        file_path = 'output/' + k + '/xs_data/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(rn))
+        file_path = sim.rd + '/xs_data/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(rn))
         std.write_csv(file_path + '.dat', xs_temp, w=14)
     
+        file_path = sim.rd + '/xs_plots/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(rn))
         plt.clf()
         plt.figure(figsize=(12,8))    
         plt.title('XS Target-Reaction vs Energy ' + isotopes.get_readable(tn) + ' --> ' + isotopes.get_readable(rn))
@@ -246,7 +260,7 @@ class sim:
         plt.ylabel('XS barns (Barns)')
         plt.grid(True)
         plt.plot(xs_temp[:,0], xs_temp[:,1])
-        plt.savefig(file_path, format='eps')
+        plt.savefig(file_path + '.eps', format='eps')
         plt.close('all') 
     
               
@@ -264,9 +278,10 @@ class sim:
         abs_sigma = abs_sigma + sigma**2
         
       if(abs_sigma > 0.0):
-        file_path = 'output/' + k + '/xs_data/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(en))
+        file_path = sim.rd + '/xs_data/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(en))
         std.write_csv(file_path + '.dat', xs_temp, w=14)
     
+        file_path = sim.rd + '/xs_plots/' + 'xs_' + str(isotopes.get_readable(tn)) + '_' + str(isotopes.get_readable(en))
         plt.clf()
         plt.figure(figsize=(12,8))    
         plt.title('XS Target-Emitted vs Energy ' + isotopes.get_readable(tn) + ' --> ' + isotopes.get_readable(en))
@@ -274,7 +289,7 @@ class sim:
         plt.ylabel('XS barns (Barns)')
         plt.grid(True)
         plt.plot(xs_temp[:,0], xs_temp[:,1])
-        plt.savefig(file_path, format='eps')
+        plt.savefig(file_path + '.eps', format='eps')
         plt.close('all')     
     
     
@@ -287,9 +302,17 @@ class sim:
       log.log(std.pad_right(isotopes.get_readable(tn), 10) + "   " + str(g.sims[k]['target'].get_isotope_number_density(tn)))
     print()
     
+
+    fh = open(sim.rd + '/target/number_density.txt', 'w')
+    for tn in ilist:  
+      fh.write(std.pad_right(isotopes.get_readable(tn), 10) + "   " + str(g.sims[k]['target'].get_isotope_number_density(tn)))
+    fh.close()    
     
     
-    
+
+
+
+
     
     print("Calculate reaction rates")  
     log.title("Calculate reaction rates")  
@@ -412,6 +435,13 @@ class sim:
     log.br()
     print()
         
+
+    fh = open(sim.rd + '/saturation_activities/saturation_times.txt', 'w')
+    for key in g.sims[k]['rr'].keys():
+      if(g.sims[k]['rr'][key] != 0.0 and not isotopes.is_stable(key)): 
+        t = numpy.log(0.05) / (-1.0 * l)
+        fh.write(std.pad_right(isotopes.get_readable(key), 10) + "   " + str(t))
+    fh.close()    
     
     g.sims[k]['saturation'] = {}
     for key in g.sims[k]['rr'].keys():
@@ -432,8 +462,10 @@ class sim:
         plt.xlabel('Time (s)')
         plt.ylabel('Activity (Bq)')
         plt.plot(g.sims[k]['saturation'][key][:,0], g.sims[k]['saturation'][key][:,1])
-        plt.savefig('output/' + k + '/saturation_activities/' + 'saturation_' + str(isotopes.get_readable(key)), format='eps')
+        plt.savefig(sim.rd + '/saturation_activities/' + 'saturation_' + str(isotopes.get_readable(key)) + '.eps', format='eps')
         plt.close('all') 
+
+
     
     
     
@@ -474,14 +506,19 @@ class sim:
         print(std.pad_right(g.sims[k]['tally_beam_end'][key], 25), end="")
         isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_beam_end'][key]
         print(std.pad_right(isotope_activity, 25))
-    print() 
-    
+    print()     
     
     log.title("End of Beam Tally")  
     for key in g.sims[k]['tally_beam_end'].keys():
       isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_beam_end'][key]
       log.log(std.pad_right(key, 10) + "  " + std.pad_right(isotopes.get_readable(key), 10) + "  " + std.pad_right(g.sims[k]['tally_beam_end'][key], 25) + std.pad_right(isotope_activity, 25))
     log.br()
+    
+    
+    fh = open(sim.rd + '/tally/end_of_beam_tally.txt', 'w')
+    for kn in g.sims[k]['tally_beam_end'].keys():
+      fh.write(std.pad_right(kn, 10) + "  " + std.pad_right(isotopes.get_readable(kn), 10) + "  " + std.pad_right(g.sims[k]['tally_beam_end'][kn], 18) + '\n')
+    fh.close()
     
     
 
@@ -521,7 +558,7 @@ class sim:
       plt.xlabel('Time (s)')
       plt.ylabel('Amount (atoms)')
       plt.plot(g.sims[k]['inbeam'][key][:,0], g.sims[k]['inbeam'][key][:,1])
-      plt.savefig('output/' + k + '/plots/in_beam/' + 'in_beam_amounts' + str(isotopes.get_readable(key)), format='eps')
+      plt.savefig(sim.rd + '/amount_in_beam/' + str(isotopes.get_readable(key)) + '.eps', format='eps')
       plt.close('all') 
     
       plt.clf()
@@ -530,11 +567,10 @@ class sim:
       plt.xlabel('Time (s)')
       plt.ylabel('Activity (Bq)')
       plt.plot(g.sims[k]['inbeam'][key][:,0], g.sims[k]['inbeam'][key][:,2])
-      plt.savefig('output/' + k + '/plots/in_beam/' + 'in_beam_activity_' + str(isotopes.get_readable(key)), format='eps')
+      plt.savefig(sim.rd + '/activity_in_beam/' + str(isotopes.get_readable(key)) + '.eps', format='eps')
       plt.close('all') 
       
-      total_activity[:,0] = g.sims[k]['inbeam'][key][:,0]
-     
+      total_activity[:,0] = g.sims[k]['inbeam'][key][:,0]     
 
       # Total Activity
       total_activity[:,1] = total_activity[:,1] + g.sims[k]['inbeam'][key][:,2]
@@ -545,11 +581,8 @@ class sim:
     plt.xlabel('Time (s)')
     plt.ylabel('Activity (Bq)')
     plt.plot(total_activity[:,0], total_activity[:,1])
-    plt.savefig('output/' + k + '/plots/total_activity/' + 'in_beam_total_activity' + str(key), format='eps')
+    plt.savefig(sim.rd + '/activity_in_beam/000___total.eps', format='eps')
     plt.close('all') 
-    
-    
-    
     
     
     
@@ -593,6 +626,15 @@ class sim:
       isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]
       log.log(std.pad_right(key, 10) + "  " + std.pad_right(isotopes.get_readable(key), 10) + "  " + std.pad_right(g.sims[k]['tally_sim_end'][key], 25) + std.pad_right(isotope_activity, 25))
     log.br()
+    
+
+
+    fh = open(sim.rd + '/tally/end_of_sim_tally.txt', 'w')
+    for kn in g.sims[k]['tally_sim_end'].keys():
+      fh.write(std.pad_right(kn, 10) + "  " + std.pad_right(isotopes.get_readable(kn), 10) + "  " + std.pad_right(g.sims[k]['tally_sim_end'][kn], 18) + '\n')
+    fh.close()
+    
+  
     
     
     
@@ -650,7 +692,7 @@ class sim:
       plt.xlabel('Time (s)')
       plt.ylabel('Isotope Amount (atoms)')
       plt.plot(plot_x, plot_y)
-      plt.savefig('output/' + k + '/plots/end_of_sim/' + 'total_sim_amount_' + str(isotopes.get_readable(key)), format='eps')
+      plt.savefig(sim.rd + '/amount_end_of_sim/' + str(isotopes.get_readable(key)), format='eps')
       plt.close('all') 
 
       plt.clf()
@@ -659,9 +701,8 @@ class sim:
       plt.xlabel('Time (s)')
       plt.ylabel('Activity (Bq)')
       plt.plot(plot_x, plot_ya)
-      plt.savefig('output/' + k + '/plots/end_of_sim/' + 'total_sim_activity_' + str(isotopes.get_readable(key)), format='eps')
+      plt.savefig(sim.rd + '/activity_end_of_sim/' + str(isotopes.get_readable(key)), format='eps')
       plt.close('all') 
-    
     
     
     plt.clf()
@@ -670,9 +711,10 @@ class sim:
     plt.xlabel('Time (s)')
     plt.ylabel('Activity (Bq)')
     plt.plot(total_activity[:,0], total_activity[:,1])
-    plt.savefig('output/' + k + '/plots/total_activity/' + 'total_sim_total_activity', format='eps')
+    plt.savefig(sim.rd + '/activity_end_of_sim/000___total.eps', format='eps')
     plt.close('all') 
     
+    """
     plt.clf()
     plt.figure(figsize=(12,8))    
     plt.title('Total Activity Throughout Simulation')
@@ -680,9 +722,9 @@ class sim:
     plt.ylabel('Activity (Bq)')
     plt.yscale('log')
     plt.plot(total_activity[:,0], total_activity[:,1])
-    plt.savefig('output/' + k + '/plots/total_activity/' + 'total_sim_total_activity_log', format='eps')
+    plt.savefig(sim.rd + '/amount_in_beam/total', format='eps')
     plt.close('all') 
-    
+    """
     
     
     
@@ -702,6 +744,10 @@ class sim:
             pass
     
     g.sims[k]['gammas_beam_end'] = numpy.zeros((n, 2),)
+    g.sims[k]['gammas_beam_end_list'] = []
+    g.sims[k]['gammas_beam_end_total'] = 0.0
+    g.sims[k]['activity_beam_end_total'] = 0.0
+
     n = 0
     for key in g.sims[k]['tally_beam_end'].keys():
       if(not isotopes.is_stable(key)):
@@ -712,7 +758,12 @@ class sim:
             gn = isotopes.get_gammas(key)
             g.sims[k]['gammas_beam_end'][n:n+len(gn), 0] = gn[:,0]
             g.sims[k]['gammas_beam_end'][n:n+len(gn), 1] = isotope_activity * gn[:,1]
+            g.sims[k]['activity_beam_end_total'] = g.sims[k]['activity_beam_end_total'] + isotope_activity
             n = n + len(gn)
+
+            for i in range(len(gn)):
+              g.sims[k]['gammas_beam_end_list'].append([key, isotopes.get_readable(key), gn[i,0], gn[i,1], isotope_activity, isotope_activity * gn[i,1]])
+              g.sims[k]['gammas_beam_end_total'] = g.sims[k]['gammas_beam_end_total'] + gn[i,0] * isotope_activity * gn[i,1]
           except:
             pass
 
@@ -724,15 +775,58 @@ class sim:
       plt.xlabel('Energy (eV)')
       plt.ylabel('Activity (Bq)')
       plt.stem(g.sims[k]['gammas_beam_end'][:,0], g.sims[k]['gammas_beam_end'][:,1])
-      plt.savefig('output/' + k + '/gamma_lines/' + 'end_of_beam_gamma_lines', format='eps')
+      plt.savefig(sim.rd + '/gammas/' + 'end_of_beam_gamma_lines.eps', format='eps')
       plt.close('all') 
-      std.write_csv('output/' + k + '/gamma_lines/end_of_beam_gamma_lines.dat', g.sims[k]['gammas_beam_end'], w=14)
+      std.write_csv(sim.rd + '/gammas/end_of_beam_gamma_lines.dat', g.sims[k]['gammas_beam_end'], w=14)
     
     
+    if(len(g.sims[k]['gammas_beam_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_beam_end_list'], key=lambda x: x[0])
+      fh = open(sim.rd + '/gammas/end_of_beam_gamma_lines_by_isotope.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
+    
+    if(len(g.sims[k]['gammas_beam_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_beam_end_list'], key=lambda x: x[2])
+      fh = open(sim.rd + '/gammas/end_of_beam_gamma_lines_by_energy.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
+    
+    if(len(g.sims[k]['gammas_beam_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_beam_end_list'], key=lambda x: x[5])
+      fh = open(sim.rd + '/gammas/end_of_beam_gamma_lines_by_activity.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
+
+
+
+
     
     ###########################
     # Gamma Lines - End of Sim
     ###########################
+
         
     n = 0
     for key in g.sims[k]['tally_sim_end'].keys():
@@ -746,21 +840,27 @@ class sim:
             pass
     
     g.sims[k]['gammas_sim_end'] = numpy.zeros((n, 2),)
+    g.sims[k]['gammas_sim_end_list'] = []
+    g.sims[k]['gammas_sim_end_total'] = 0.0
+    g.sims[k]['activity_sim_end_total'] = 0.0
+    
     n = 0
     for key in g.sims[k]['tally_sim_end'].keys():
       if(not isotopes.is_stable(key)):
-        isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]
-        
+        isotope_activity = isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]        
         if(isotope_activity != 0):
           try:
             gn = isotopes.get_gammas(key)
             g.sims[k]['gammas_sim_end'][n:n+len(gn), 0] = gn[:,0]
             g.sims[k]['gammas_sim_end'][n:n+len(gn), 1] = isotope_activity * gn[:,1]
+            g.sims[k]['activity_sim_end_total'] = g.sims[k]['activity_sim_end_total'] + isotope_activity
             n = n + len(gn)
+
+            for i in range(len(gn)):
+              g.sims[k]['gammas_sim_end_list'].append([key, isotopes.get_readable(key), gn[i,0], gn[i,1], isotope_activity, isotope_activity * gn[i,1]])
+              g.sims[k]['gammas_sim_end_total'] = g.sims[k]['gammas_sim_end_total'] + gn[i,0] * isotope_activity * gn[i,1]
           except:
-            pass
-    
-    
+            pass   
     
     if(len(g.sims[k]['gammas_sim_end']) > 0):
     
@@ -770,12 +870,48 @@ class sim:
       plt.xlabel('Energy (eV)')
       plt.ylabel('Activity (Bq)')
       plt.stem(g.sims[k]['gammas_sim_end'][:,0], g.sims[k]['gammas_sim_end'][:,1])
-      plt.savefig('output/' + k + '/gamma_lines/' + 'end_of_sim_gamma_lines', format='eps')
+      plt.savefig(sim.rd + '/gammas/end_of_sim_gamma_lines.eps', format='eps')
       plt.close('all') 
-      std.write_csv('output/' + k + '/gamma_lines/end_of_sim_gamma_lines.dat', g.sims[k]['gammas_sim_end'], w=14)
+      #std.write_csv(sim.rd + '/gammas/end_of_sim_gamma_lines.dat', g.sims[k]['gammas_sim_end'], w=14)
     
-
-
+    if(len(g.sims[k]['gammas_sim_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_sim_end_list'], key=lambda x: x[0])
+      fh = open(sim.rd + '/gammas/end_of_sim_gamma_lines_by_isotope.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
+    
+    if(len(g.sims[k]['gammas_sim_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_sim_end_list'], key=lambda x: x[2])
+      fh = open(sim.rd + '/gammas/end_of_sim_gamma_lines_by_energy.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
+    
+    if(len(g.sims[k]['gammas_sim_end_list']) > 0):
+      gammas = sorted(g.sims[k]['gammas_sim_end_list'], key=lambda x: x[5])
+      fh = open(sim.rd + '/gammas/end_of_sim_gamma_lines_by_activity.dat', 'w')
+      for gamma in gammas:
+        fh.write(std.pad_right(gamma[0], 10))
+        fh.write(std.pad_right(gamma[1], 10))
+        fh.write(std.pad_right(gamma[2], 22))
+        fh.write(std.pad_right(gamma[3], 22))
+        fh.write(std.pad_right(gamma[4], 22))
+        fh.write(std.pad_right(gamma[5], 22))
+        fh.write('\n')
+      fh.close()
 
 
 
@@ -786,7 +922,7 @@ class sim:
     ###########################
 
 
-    fh = open('output/' + k + '/radioactive_isotopes.dat', 'w')
+    fh = open(sim.rd + '/radioactive_isotopes/end_of_beam.dat', 'w')
     fh.write('Radioactive Isotopes\n')
     fh.write('===================================================\n')
     fh.write('\n')
@@ -798,8 +934,14 @@ class sim:
       if(not isotopes.is_stable(key) and g.sims[k]['tally_beam_end'][key] > 0.0):
         fh.write(std.pad_right(isotopes.get_readable(key), 10) + "  " + str(isotopes.get_decay_constant(key) * g.sims[k]['tally_beam_end'][key]) + '\n')
         
-    fh.write('\n')
-    fh.write('\n')
+    fh.write('\n')    
+    fh.close()  
+
+
+
+    fh = open(sim.rd + '/radioactive_isotopes/end_of_sim.dat', 'w')
+    fh.write('Radioactive Isotopes\n')
+    fh.write('===================================================\n')
     fh.write('\n')
     fh.write('End of Sim\n')
     fh.write('----------\n')
@@ -808,11 +950,176 @@ class sim:
     for key in g.sims[k]['tally_sim_end'].keys():
       if(not isotopes.is_stable(key) and g.sims[k]['tally_sim_end'][key] > 0.0):
         fh.write(std.pad_right(isotopes.get_readable(key), 10) + "  " + str(isotopes.get_decay_constant(key) * g.sims[k]['tally_sim_end'][key]) + '\n')
-      
-      
+            
     fh.write('\n')
-    fh.write('\n')      
+    fh.write('\n')        
     fh.close()  
+
+
+
+    
+    fh = open(sim.rd + '/gamma_dose/gamma_dose.dat', 'w')
+
+    gamma_ev = g.sims[k]['gammas_beam_end_total']
+    gamma_J = 1.60218E-19 * gamma_ev
+    gamma_dose = gamma_J / (12.57 * 80)
+    gamma_dose_hr = (gamma_J / (12.57 * 80)) * 3600
+    gamma_dose_p = (gamma_dose_hr / 1.140771128E-04) * 100
+
+
+    print('Gamma Dose - Beam End')
+    print('===================================================')
+    print()
+
+    print("Activity/Bq                    ", g.sims[k]['activity_beam_end_total'])
+    print("Power eV/s                     ", g.sims[k]['gammas_beam_end_total'])
+    print("Power J/s                      ", gamma_J)
+    print("Dose Gy/s                      ", gamma_dose)
+    print("Dose Gy/hr                     ", gamma_dose_hr)
+    print("Percentage of annual dose/hr   ", gamma_dose_p)
+    print()
+
+
+    fh.write('Gamma Dose - Beam End\n')
+    fh.write('===================================================\n')
+    fh.write('Activity/Bq                    ' + str(g.sims[k]['activity_beam_end_total']) + '\n')
+    fh.write('Power eV/s                     ' + str(g.sims[k]['gammas_beam_end_total']) + '\n')
+    fh.write('Power J/s                      ' + str(gamma_J) + '\n')
+    fh.write('Dose Gy/s                      ' + str(gamma_dose) + '\n')
+    fh.write('Dose Gy/hr                     ' + str(gamma_dose_hr) + '\n')
+    fh.write('Percentage of annual dose/hr   ' + str(gamma_dose_p) + '\n')
+    fh.write('\n')
+    fh.write('\n')
+
+    log.br()
+    log.log('Gamma Dose - Beam End')
+    log.log('Activity/Bq                    ' + str(g.sims[k]['activity_beam_end_total']))
+    log.log('Power eV/s                     ' + str(g.sims[k]['gammas_beam_end_total']))
+    log.log('Power J/s                      ' + str(gamma_J))
+    log.log('Dose Gy/s                      ' + str(gamma_dose))
+    log.log('Dose Gy/hr                     ' + str(gamma_dose_hr))
+    log.log('Percentage of annual dose/hr   ' + str(gamma_dose_p))
+    log.br()
+
+
+    gamma_ev = g.sims[k]['gammas_sim_end_total']
+    gamma_J = 1.60218E-19 * gamma_ev
+    gamma_dose = gamma_J / (4.188 * 100)
+    gamma_dose_hr = (gamma_J / (12.57 * 80)) * 3600
+    gamma_dose_p = (gamma_dose_hr / 1.140771128E-04) * 100
+
+    print('Gamma Dose - Sim End')
+    print('===================================================')
+    print()
+    print("Activity/Bq                    ", g.sims[k]['activity_sim_end_total'])
+    print("Energy eV/s                    ", g.sims[k]['gammas_sim_end_total'])
+    print("Energy J/s                     ", gamma_J)
+    print("Dose Gy                        ", gamma_dose)
+    print("Dose Gy/hr                     ", gamma_dose_hr)
+    print("Percentage of annual dose/hr   ", gamma_dose_p)
+    print()
+    print()
+
+    fh.write('Gamma Dose - Sim End\n')
+    fh.write('===================================================\n')
+    fh.write('Activity/Bq                    ' + str(g.sims[k]['activity_sim_end_total']) + '\n')
+    fh.write('Power eV/s                     ' + str(g.sims[k]['gammas_sim_end_total']) + '\n')
+    fh.write('Power J/s                      ' + str(gamma_J) + '\n')
+    fh.write('Dose Gy/s                      ' + str(gamma_dose) + '\n')
+    fh.write('Dose Gy/hr                     ' + str(gamma_dose_hr) + '\n')
+    fh.write('Percentage of annual dose/hr   ' + str(gamma_dose_p) + '\n')
+    fh.write('\n')
+    fh.write('\n')
+
+    log.br()
+    log.log('Gamma Dose - Sim End')
+    log.log('Activity/Bq                    ' + str(g.sims[k]['activity_sim_end_total']))
+    log.log('Power eV/s                     ' + str(g.sims[k]['gammas_sim_end_total']))
+    log.log('Power J/s                      ' + str(gamma_J))
+    log.log('Dose Gy/s                      ' + str(gamma_dose))
+    log.log('Dose Gy/hr                     ' + str(gamma_dose_hr))
+    log.log('Percentage of annual dose/hr   ' + str(gamma_dose_p))
+    log.br()
+
+
+    print("Absorbed Dose Calculations")
+    print('===================================================')
+    print('Absorbed dose assumptions:')
+    print('1. radiation from point, emitted isotropically')   
+    print('2. 80Kg human')   
+    print('3. 1m from point source')   
+    print('4. 1m squared surface area')   
+    print('5. all energy absorbed')   
+    print()
+    print()
+
+    print("Dose Limits")
+    print('===================================================')
+    print("employees 18+             20 millisieverts/year")
+    print("trainees 18+              6 millisieverts/year")
+    print("public and under 18s      1 millisievert/year")
+    print("public and under 18s      1.140771128E-04 millisieverts/hour")
+    print("")
+    print("Dose averaged over area of skin not exceeding 1cm2")
+    print("Source: http://www.hse.gov.uk/radiation/ionising/doses/")
+    print()
+    print()
+ 
+
+    fh.write('Absorbed Dose Calculations\n')
+    fh.write('===================================================\n')
+    fh.write('Absorbed dose assumptions:\n')
+    fh.write('1. radiation from point, emitted isotropically\n')
+    fh.write('2. 80Kg human\n')
+    fh.write('3. 1m from point source\n')
+    fh.write('4. 1m squared surface area\n')
+    fh.write('5. all energy absorbed\n')
+    fh.write('\n')
+    fh.write('\n')
+
+    fh.write('Dose Limits\n')
+    fh.write('===================================================\n')
+    fh.write('employees 18+             20 millisieverts/year\n')
+    fh.write('trainees 18+              6 millisieverts/year\n')
+    fh.write('public and under 18s      1 millisievert/year\n')
+    fh.write('public and under 18s      1.140771128E-04 millisieverts/hour\n')
+    fh.write('\n')
+    fh.write('Dose averaged over area of skin not exceeding 1cm2\n')
+    fh.write('Source: http://www.hse.gov.uk/radiation/ionising/doses/\n')
+    fh.write('\n')
+    fh.write('\n')
+
+    fh.close()
+
+
+
+
+
+ 
+    """
+    fh.write('Gamma Dose - Beam End\n')
+    fh.write('===================================================\n')
+    fh.write('\n')
+    fh.write(g.sims[k]['gammas_beam_end_total'] )
+    fh.write('\n')
+    fh.write('\n')  
+
+ 
+
+    fh.write('Gamma Dose - Beam End\n')
+    fh.write('===================================================\n')
+    fh.write('\n')
+    fh.write(g.sims[k]['gammas_beam_end_total'] )
+    fh.write('\n')
+    fh.write('\n')  
+   
+
+
+            
+    fh.write('\n')
+    fh.write('\n')  
+    """
+
       
     """  
       if(key not in g.sims[k]['tally_beam_end'].keys()):

@@ -1,0 +1,41 @@
+Gamma Dose - Beam End
+===================================================
+Activity/Bq                    54.4306601689
+Power eV/s                     28342871818.2
+Power J/s                      4.54103823697e-09
+Dose Gy/s                      4.51575003676e-12
+Dose Gy/hr                     1.62567001323e-08
+Percentage of annual dose/hr   0.0142506237521
+
+
+Gamma Dose - Sim End
+===================================================
+Activity/Bq                    5.80221584491
+Power eV/s                     2227911995.02
+Power J/s                      3.56951604018e-10
+Dose Gy/s                      8.52319971389e-13
+Dose Gy/hr                     1.27786970412e-09
+Percentage of annual dose/hr   0.00112018061534
+
+
+Absorbed Dose Calculations
+===================================================
+Absorbed dose assumptions:
+1. radiation from point, emitted isotropically
+2. 80Kg human
+3. 1m from point source
+4. 1m squared surface area
+5. all energy absorbed
+
+
+Dose Limits
+===================================================
+employees 18+             20 millisieverts/year
+trainees 18+              6 millisieverts/year
+public and under 18s      1 millisievert/year
+public and under 18s      1.140771128E-04 millisieverts/hour
+
+Dose averaged over area of skin not exceeding 1cm2
+Source: http://www.hse.gov.uk/radiation/ionising/doses/
+
+

@@ -37,7 +37,7 @@ class read_input:
       k = 'sim' + str(n)
       if(k in g.inp.keys()): 
         read_input.sim(k)
-      elif(n > 10 and k not in g.inp.keys()): 
+      elif(n > 100 and k not in g.inp.keys()): 
         loop = False    
       n = n + 1   
       
