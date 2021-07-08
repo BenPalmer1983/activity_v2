@@ -1,0 +1,12 @@
+
+# Data files
+data isotopes="/cloud/Code/python/activity/data/isotopes" xs="/cloud/Code/python/activity/data/xs"
+
+# Sim
+sim1 exyz="exyz/EXYZ_Fe_05MeV_500um.txt" target_composition=Fe,100.0 target_depth=0.5,mm target_density=7808,kgm3 beam_projectile='proton' beam_energy=5,MeV beam_area=64,mm2 beam_duration=17731601,s beam_current=60.0,uA end_time=604800,s
+sim2 exyz="exyz/EXYZ_Fe_10MeV_500um.txt" target_composition=Fe,100.0 target_depth=0.5,mm target_density=7808,kgm3 beam_projectile='proton' beam_energy=10,MeV beam_area=64,mm2 beam_duration=11609977,s beam_current=60.0,uA end_time=604800,s
+sim3 exyz="exyz/EXYZ_Fe_15MeV_500um.txt" target_composition=Fe,100.0 target_depth=0.5,mm target_density=7808,kgm3 beam_projectile='proton' beam_energy=15,MeV beam_area=64,mm2 beam_duration=13385620,s beam_current=60.0,uA end_time=604800,s
+sim4 exyz="exyz/EXYZ_Fe_20MeV_500um.txt" target_composition=Fe,100.0 target_depth=0.5,mm target_density=7808,kgm3 beam_projectile='proton' beam_energy=20,MeV beam_area=64,mm2 beam_duration=28804500,s beam_current=60.0,uA end_time=604800,s
+sim5 exyz="exyz/EXYZ_Fe_25MeV_500um.txt" target_composition=Fe,100.0 target_depth=0.5,mm target_density=7808,kgm3 beam_projectile='proton' beam_energy=25,MeV beam_area=64,mm2 beam_duration=33795379,s beam_current=60.0,uA end_time=604800,s
+
+

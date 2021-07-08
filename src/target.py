@@ -107,6 +107,9 @@ class target:
     
   def get_depth(self):
     return self.depth
+
+  def get_depth_ang(self):
+    return 1.0E10 * self.depth
     
   def get_target_number_density(self, target):
     if(target in self.composition.keys()):
@@ -120,13 +123,10 @@ class target:
           
   def display(self):
     print("Target")
-    print("")
+    print("========================================================")
     print("Depth:   ", self.depth, "m")
     print("Density: ", self.density, "kgm3")  
     print("Mass:    ", self.avgmass, "amu")  
-    print("")
-    print("Composition:")
-    print("")
     print("Isotope  Mass         PBM          PBN")
     print("========================================================")
     for k in self.composition.keys():
@@ -138,4 +138,6 @@ class target:
       ind = str("{:.4E}".format(self.composition[k]['isotope_number_density']))
       print(isotope, mass, pbm, pbn, id, ind, sep="   ")
   
-      #"{:.3E}".format(
+
+    print("========================================================")
+    print()

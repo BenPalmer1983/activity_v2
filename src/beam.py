@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 class beam:
 
   def __init__(self):
@@ -65,11 +59,11 @@ class beam:
     print("Beam Details")
     print("======================")
     print("Projectile: ", self.projectile)
-    print("Energy: ", self.energy)
-    print("Duration: ", self.duration)
-    print("Area: ", self.duration)
-    print("Current: ", self.current)
-    print("Flux: ", self.flux)
+    print("Energy: ", self.energy, "eV")
+    print("Duration: ", self.duration, "s")
+    print("Area: ", self.area, "m^2")
+    print("Current: ", self.current, "A")
+    print("Flux: ", self.flux, "projectiles/s")
     print()
     
     
